@@ -1,11 +1,13 @@
+require_relative "html_element"
+
 module Markdown
   module HtmlElements
     class Title < HtmlElement
-      attr_reader :type
+      attr_reader :level
 
       def initialize(content, level: 1)
-        @content = content
-        @type = type
+        super(content)
+        @level = level
       end
     end
   end
